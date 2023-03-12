@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Jogo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Editar Jogo</div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="form-group">
+                <label for="description">Descrição</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="developer">Desenvolvedor</label>
+                <input type="text" class="form-control" id="developer" name="developer">
+              </div>
+              <div class="form-group">
+                <label for="publisher">Publicador</label>
+                <input type="text" class="form-control" id="publisher" name="publisher">
+              </div>
+              <div class="form-group">
+                <label for="release_year">Ano de lançamento</label>
+                <input type="number" class="form-control" id="release_year" name="release_year">
+              </div>
+              <button type="button" class="btn btn-primary" id="update-button">Atualizar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="/static/js/editar_jogo.js"></script>
+</body>
+</html>

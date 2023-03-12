@@ -1,0 +1,12 @@
+# Arquivos do ambiente virtual
+venv
+
+# Arquivos de cache
+__pycache__
+
+# Arquivos de log
+*.log
+
+# Senhas
+*.env
+*.ini

@@ -1,0 +1,10 @@
+FROM mysql:8.0
+
+ENV MYSQL_ROOT_PASSWORD=senha123
+ENV MYSQL_DATABASE=db_games
+ENV MYSQL_USER=admin
+ENV MYSQL_PASSWORD=admin
+COPY db/database.sql /opt
+CMD ["mysqld"]
+
+EXPOSE 3306

@@ -3,14 +3,14 @@ from functools import wraps
 import mysql.connector
 import os
 from werkzeug.utils import secure_filename
-from forms import JogoForm  # importar o formulário JogoForm
+from jogo_form import JogoForm  # importar o formulário JogoForm
 
 app = Flask(__name__)
 app.secret_key = 'mysecretkey'
 
 # Configurações do Banco de Dados
 db = mysql.connector.connect(
-  host="localhost",
+  host="catalogo-games-db",
   user="admin",
   password="admin",
   database="db_games"

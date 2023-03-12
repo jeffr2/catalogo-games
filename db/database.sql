@@ -1,6 +1,3 @@
--- Criação do banco de dados
-CREATE DATABASE db_games;
-
 -- Criação da tabela de usuários
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,

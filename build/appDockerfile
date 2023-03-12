@@ -1,0 +1,26 @@
+# Imagem base do Python
+FROM python:3.9-slim-buster
+
+# Definindo diretório de trabalho
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y default-libmysqlclient-dev build-essential && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copiando arquivos necessários para a aplicação
+COPY *.py .
+COPY *.html .
+COPY templates/ ./templates
+COPY views/ ./views
+COPY js/ ./js
+COPY requirements.txt .
+
+# Instalando dependências
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expondo a porta em que a aplicação irá rodar
+EXPOSE 5000
+
+# Rodando o comando para iniciar a aplicação
+CMD ["python3", "-u", "app.py"]

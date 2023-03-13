@@ -12,8 +12,7 @@ RUN apt-get update && \
 COPY *.py .
 COPY *.html .
 COPY templates/ ./templates
-COPY views/ ./views
-COPY js/ ./js
+COPY static/ ./static
 COPY requirements.txt .
 
 # Instalando dependências

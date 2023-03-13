@@ -109,3 +109,6 @@ def novo_jogo():
         return redirect('/games')
     else:
         return render_template('novo_jogo.html', form=form)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
